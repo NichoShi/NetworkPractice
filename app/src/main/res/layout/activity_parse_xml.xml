@@ -4,35 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.nichoshi.networkpractice.MainActivity">
-
-    <Button
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:id="@+id/WebViewBtn"
-      android:text="WebView"
-      android:layout_gravity="center"/>
+    tools:context="com.example.nichoshi.networkpractice.ParseXMLActivity">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/HttpURLConnectionBtn"
-        android:text="HttpURLConnection"
+        android:id="@+id/parseByPULLBtn"
+        android:text="parse by PULL"
         android:layout_gravity="center"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/HttpClientBtn"
-        android:text="HttpClient"
+        android:id="@+id/parseBySAXBtn"
+        android:text="parse by SAX"
         android:layout_gravity="center"/>
 
-    <Button
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/parseXMLBtn"
-        android:text="parseXML"
-        android:layout_gravity="center"/>
+        android:id="@+id/parseResultTextView"/>
 
 
 

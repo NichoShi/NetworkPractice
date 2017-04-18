@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button WebViewBtn;
     private Button HttpURLConnectionBtn;
     private Button HttpClientBtn;
+    private Button parseXMLBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         WebViewBtn = (Button) findViewById(R.id.WebViewBtn);
         HttpURLConnectionBtn = (Button) findViewById(R.id.HttpURLConnectionBtn);
         HttpClientBtn = (Button) findViewById(R.id.HttpClientBtn);
+        parseXMLBtn = (Button) findViewById(R.id.parseXMLBtn);
 
 
         WebViewBtn.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,HttpClientActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        parseXMLBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ParseXMLActivity.class);
                 startActivity(intent);
             }
         });
