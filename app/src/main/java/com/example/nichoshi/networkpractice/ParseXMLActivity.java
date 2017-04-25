@@ -4,6 +4,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -41,9 +42,11 @@ public class ParseXMLActivity extends AppCompatActivity {
         parseByPULLBtn = (Button) findViewById(R.id.parseByPULLBtn);
         parseBySAXBtn = (Button) findViewById(R.id.parseBySAXBtn);
         parseResultTextView = (TextView) findViewById(R.id.parseResultTextView);
+
         requestData();
 
-        Data = null;
+
+
 
         parseByPULLBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -185,6 +188,7 @@ public class ParseXMLActivity extends AppCompatActivity {
 
 
     public void requestData(){
+        Data = "";
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -199,7 +203,7 @@ public class ParseXMLActivity extends AppCompatActivity {
                     InputStream in = connection.getInputStream();
                     BufferedReader reader = new BufferedReader(new InputStreamReader(in));
                     StringBuilder data = new StringBuilder();
-                    String line = "";
+                    String line;
                     while ((line = reader.readLine())!= null){
                         data.append(line);
                     }

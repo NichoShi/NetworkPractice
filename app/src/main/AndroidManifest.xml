@@ -21,7 +21,8 @@
         <activity android:name=".WebViewActivity" />
         <activity android:name=".HttpURLConnectionActivity" />
         <activity android:name=".HttpClientActivity" />
-        <activity android:name=".ParseXMLActivity"></activity>
+        <activity android:name=".ParseXMLActivity" />
+        <activity android:name=".ParseJSONActivity"></activity>
     </application>
 
 </manifest>

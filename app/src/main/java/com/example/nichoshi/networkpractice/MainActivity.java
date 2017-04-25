@@ -9,11 +9,14 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 
+import java.io.BufferedReader;
+
 public class MainActivity extends AppCompatActivity {
     private Button WebViewBtn;
     private Button HttpURLConnectionBtn;
     private Button HttpClientBtn;
     private Button parseXMLBtn;
+    private Button parseJSONBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         HttpURLConnectionBtn = (Button) findViewById(R.id.HttpURLConnectionBtn);
         HttpClientBtn = (Button) findViewById(R.id.HttpClientBtn);
         parseXMLBtn = (Button) findViewById(R.id.parseXMLBtn);
+        parseJSONBtn = (Button) findViewById(R.id.parseJSONBtn);
 
 
         WebViewBtn.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +56,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,ParseXMLActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        parseJSONBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ParseJSONActivity.class);
                 startActivity(intent);
             }
         });
